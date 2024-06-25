@@ -1,10 +1,8 @@
 import {
-    Avatar,
     Box,
     Divider,
     Drawer,
     List,
-    Typography,
     useMediaQuery,
     useTheme,
   } from "@mui/material";
@@ -29,26 +27,11 @@ import {
           anchor="left"
         >
           <Box
-            width={theme.spacing(28)}
+            width={theme.spacing(15)}
             height="100%"
             display="flex"
             flexDirection="column"
           >
-            <Box
-              width="100%"
-              height={theme.spacing(20)}
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              flexDirection="column"
-              gap={1}
-            >
-              <Avatar
-                sx={{ height: theme.spacing(12), width: theme.spacing(12), fontSize: '2em' }}
-              />
-              <Typography>username</Typography>
-            </Box>
-  
             <Divider />
   
             <Box
@@ -59,16 +42,16 @@ import {
             >
               <List component="nav">
                 <ListItemLink
-                  icon="home"
-                  label="Página Inicial"
+                  icon="work"
+                  label="Projetos"
                   onClick={toggleDrawerOpen}
                   to="/"
                 />
                 <ListItemLink
-                  icon="person"
-                  label="Usuários"
+                  icon="dashboard"
+                  label="Relatórios"
                   onClick={toggleDrawerOpen}
-                  to="/usuarios"
+                  to="/relatorios"
                 />
               </List>
               <ToggleThemeButton />
@@ -77,7 +60,7 @@ import {
         </Drawer>
   
         <Box
-          marginLeft={smDown ? 0 : theme.spacing(28)}
+          marginLeft={smDown ? 0 : theme.spacing(15)}
         >
           <Outlet />
         </Box>

@@ -27,8 +27,8 @@ export const ListItemLink = ({
   };
 
   return (
-    <ListItemButton onClick={handleClick}>
-      <ListItemIcon>
+    <ListItemButton sx={{ display: 'flex', flexDirection: 'column' }} onClick={handleClick}>
+      <ListItemIcon sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Icon>{icon}</Icon>
       </ListItemIcon>
       <ListItemText primary={label} />

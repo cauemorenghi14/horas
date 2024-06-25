@@ -1,28 +1,28 @@
-import { createBrowserRouter } from "react-router-dom"
-import App from "../App"
-import { Home } from "../pages/Home"
-import { MenuLateral } from "../layout/menu-lateral/MenuLateral"
-import { Usuarios } from "../pages/Usuarios"
+import { createBrowserRouter } from "react-router-dom";
+import App from "../App";
+import { MenuLateral } from "../layout/menu-lateral/MenuLateral";
+import { Projetos } from "../pages/Projetos";
+import { Relatorios } from "../pages/Relatorios";
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <MenuLateral />,
         children: [
-            {
-                path: '/',
-                element: <MenuLateral />,
-                children: [
-                    {
-                        path: '/',
-                        element: <Home />
-                    },
-                    {
-                        path: '/usuarios',
-                        element: <Usuarios />
-                    }
-                ]
-            }
-        ]
-    }
-])
+          {
+            path: "/",
+            element: <Projetos />,
+          },
+          {
+            path: "/relatorios",
+            element: <Relatorios />,
+          },
+        ],
+      },
+    ],
+  },
+]);

@@ -48,8 +48,8 @@ import {
                   to="/"
                 />
                 <ListItemLink
-                  icon="dashboard"
-                  label="Relatórios"
+                  icon="assignment"
+                  label="Tarefas"
                   onClick={toggleDrawerOpen}
                   to="/relatorios"
                 />

@@ -7,6 +7,15 @@ export type IDrawerContextProps = {
   toggleDrawerOpen: () => void;
 };
 
+export type IAppDescricaoDrawerContextProps = {
+  children: React.ReactNode;
+};
+
+export type IDescricaoDrawerContextProps = {
+  isDrawerOpen: boolean;
+  toggleDrawerOpen: () => void;
+};
+
 export type IThemeContextProps = {
   themeName: "light" | "dark";
   toggleTheme: () => void;
